@@ -3,14 +3,21 @@ import logo from './img/weather.png';
 import './App.css';
 import common from './constants/Common';
 import PlacesNav from './components/PlacesNav';
+import WeatherContent from './components/WeatherContent';
 
-class App extends Component {
+const App = React.createClass ({
+
+  getInitialState(){
+    return{
+      selectedPlaceCode: 'DUBLIN'
+    }
+  },
 
   onPlaceClick(placeCode){
     this.setState({
       selectedPlaceCode: placeCode
     })
-  }
+  },
 
   render() {
     return (
@@ -22,12 +29,12 @@ class App extends Component {
 
         <PlacesNav onClick={this.onPlaceClick} />
 
-        <div className="weather-content">
+        <WeatherContent placeName={this.state.selectedPlaceCode} />
 
-        </div>
+
       </div>
     );
-  }
-}
+  },
+});
 
 export default App;
