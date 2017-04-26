@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+  font-family : monospace;
+}
+
+.App-logo {
+  animation: App-logo-fade-in 4s;
+  height: 80px;
+}
+
+.places-nav{
+  border-bottom: 4px solid #CFCFC4;
+  color: #AEC6FF;
+}
+
+.places-nav h2{
+  display: inline-block;
+  margin: 0;
+  padding: 15px 20px;
+}
+
+.App-header {
+  background-color: #AEC6FF;
+  height: 150px;
+  padding: 20px;
+  border-bottom: 4px solid #CFCFC4;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
